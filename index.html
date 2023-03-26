@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        div.alert{
+            position: relative;
+            padding: 1rem 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            color: #664d03;
+            background-color: #fff3cd;
+            border-color: #ffecb5;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    
+    <main>
+        
+        <section id="login">
+            <div id="imagem">
+                <img src="" alt="">
+            </div>
+            
+            <div id="conteudo">
+                <h1>Login</h1>
+                <h2>Ainda não tem uma conta? <a href="cadastro" id="login">Cadastrar-se</a></h2>
+               
+                <p>Se já tem uma conta faça login para ter acesso aos conteudos</p>
+                
+
+                <form action="" method="post">
+
+                    <div class="campo">
+                        <i class="material-icons">alternate_email</i>
+                        <input type="text" name="usuario" id="usuario" placeholder="Seu nome de usuario" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" name="senha" id="senha" placeholder="Sua senha" maxlength="8" required>
+                    </div>
+                    <input type="submit" value="Fazer Login" id="enviar">
+                    <a href="#" id="f_senha">Esqueci a senha</a>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        document.getElementById("senha").onkeypress = function(t) {
+         var chr = String.fromCharCode(t.which);
+         if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM".indexOf(chr) < 0)
+           return false;
+       };
+
+       document.getElementById("usuario").onkeypress = function(p) {
+         var chr = String.fromCharCode(p.which);
+         if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM".indexOf(chr) < 0)
+           return false;
+       };
+    </script>
+
+    <script>
+        window.addEventListener('resize', function() {
+        var width = window.innerWidth;
+        if (width < 425) { // 768 é a largura do viewport de um dispositivo de tela pequena (como um celular)
+            window.location.href = '/mobile.html';
+        }
+        });
+    </script>
+</body>
+</html>
